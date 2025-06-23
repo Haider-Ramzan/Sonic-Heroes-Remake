@@ -1,0 +1,798 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="26.2.14">
+  <diagram name="Page-1" id="1OLNDOfv47y8RsjYFl50">
+    <mxGraphModel dx="-1561" dy="2171" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QuookxrwxB5gQYorjzpM-4" value="Player" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3923" y="220" width="500" height="750" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-5" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # static health: int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # posX: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # posY: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # velocityX: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # velocityY: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # acceleration: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # deacceleration: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # terminalVelocity: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # gravity: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # playerHeight: int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # playerWidth: int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # onGround: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # isFlying: bool //&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # isBallForm: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # isFastRun: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # lastDirectionRight: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # isLead: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # leadIsFlying: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # isInvincible: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # isFlyingPowerUp: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # hitboxNormal: sf::FloatRect&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # hitboxBall: sf::FloatRect&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # currentHitbox: sf::FloatRect*&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # ballFormClock: sf::Clock&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # ballCooldownActive: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # ballDuration: float&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; //sprites&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; //frames and animation stuff&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-4">
+          <mxGeometry y="26" width="500" height="464" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-6" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-4">
+          <mxGeometry y="490" width="500" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-7" value="&lt;div&gt;&amp;nbsp;+ move(lvl: char**, cell_size: float, levelWidth: int, levelHeight: int, int&amp;amp;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + followPlayer(leadPlayer: Player*, lvl: char**, cell_size: float, levelWidth: int, levelHeight: int, difference: int): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + player_gravity(lvl: char**, offset_y: float&amp;amp;, gravity: float, clock: Clock&amp;amp;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + takeDamage(): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + enterBallForm(): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + exitBallForm(): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + rollAttack(): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + draw(window: sf::RenderWindow&amp;amp;, offsetX: float): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + draw(window: sf::RenderWindow&amp;amp;): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + updateAnimation(deltaTime: float): void&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;////getters setters&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + useAbility(lvl: char**, offset_y: float&amp;amp;, cell_size: float): void [pure virtual]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + usePowerUp(lvl: char**, offset_y: float&amp;amp;, cell_size: float): void [pure virtual]&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-4">
+          <mxGeometry y="498" width="500" height="252" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-15" value="Mainmenu" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4193" y="-350" width="270" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-275" value="&lt;div&gt;-bgTexture: Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -bgSprite: Sprite&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-15">
+          <mxGeometry y="26" width="270" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-15">
+          <mxGeometry y="70" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-17" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; +MainMenu(window: RenderWindow*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +draw() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~MainMenu() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-15">
+          <mxGeometry y="78" width="270" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-21" value="BossLevel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3403" y="-210" width="260" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-205" value="&amp;nbsp; &amp;nbsp; - bossEnemy: BossEnemy" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-21">
+          <mxGeometry y="26" width="260" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-22" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-21">
+          <mxGeometry y="52" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-23" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; +BossLevel(screenWidth: int) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +run(window: RenderWindow&amp;amp;, int&amp;amp;) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +isWinner() : bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~BossLevel() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-21">
+          <mxGeometry y="60" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-24" value="Game" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5423" y="130" width="260" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-400" value="- Level* level&lt;div&gt;- Screen* screen&amp;nbsp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-24">
+          <mxGeometry y="26" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-26" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-24">
+          <mxGeometry y="70" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-27" value="&lt;div&gt;&amp;nbsp;+Game()&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +run() : void&lt;/div&gt;&lt;div&gt;+ ~Game()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-24">
+          <mxGeometry y="78" width="260" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-28" value="Map" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3360" y="550" width="390" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-29" value="&lt;div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -height: int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -width: int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -lvl: char**&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -cellSize: int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -wallTex1: Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -wallSprite1: Sprite&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -platformTex: Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -platformSprite: Sprite&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -spikesTex: Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -spikesSprite: Sprite&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -breakWallTex: Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -breakWallSprite: Sprite&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -FinishTex: Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -FinishSprite: Sprite&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -bottomLessTex: Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -bottomLessSprite: Sprite&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-28">
+          <mxGeometry y="26" width="390" height="244" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-30" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-28">
+          <mxGeometry y="270" width="390" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-31" value="&lt;div&gt;+Map(string) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~Map() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +drawMap(window: RenderWindow&amp;amp;, offsetX: float, wallSprite: Sprite&amp;amp;, platformSprite: Sprite&amp;amp;, finishSprite: Sprite&amp;amp;) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +drawMap(window: RenderWindow&amp;amp;, wallSprite: Sprite&amp;amp;, platformSprite: Sprite&amp;amp;) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getLevel() : char**&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getHeight() : int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getWidth() : int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getCellSize() : int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getWallTexture() : Texture&amp;amp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getWallSprite() : Sprite&amp;amp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setLevel(newLvl: char**) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setHeight(h: int) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setWidth(w: int) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setCellSize(cs: int) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setWallTexture(tex: Texture&amp;amp;) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setWallSprite(spr: Sprite&amp;amp;) : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-28">
+          <mxGeometry y="278" width="390" height="272" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-32" value="Level" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4482" y="90" width="410" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-33" value="&lt;div&gt;&lt;div&gt;&amp;nbsp;#map: Map&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #camera: SlidingWindow&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #player: Player*&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #follower1: Player*&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #follower2: Player*&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #playerFactory: PlayerFactory&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #collectablesFactory: CollectablesFactory&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #collectableRing: Collectables*&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #collectableLife: Collectables*&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #collectablePowerUp: Collectables*&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #bgTexture: sf::Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #bgSprite: sf::Sprite&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #offset_y: float&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-32">
+          <mxGeometry y="26" width="410" height="204" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-34" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-32">
+          <mxGeometry y="230" width="410" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-35" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; +Level(mapName: const std::string&amp;amp;, bgPath: const std::string&amp;amp;, screenWidth: int) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~Level() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +run(window: RenderWindow&amp;amp;, ) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +isWinner() : bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getPlayer() : Player*&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-32">
+          <mxGeometry y="238" width="410" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-36" value="Screen&amp;nbsp;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5333" y="-180" width="290" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-37" value="&lt;div&gt;# window: sf::RenderWindow*&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # font: sf::Font&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-36">
+          <mxGeometry y="26" width="290" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-38" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-36">
+          <mxGeometry y="70" width="290" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-39" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + Screen(window: sf::RenderWindow*)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + draw() : void [pure virtual]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + ~Screen()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-36">
+          <mxGeometry y="78" width="290" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-44" value="Instructions" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4193" y="-170" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-231" value="&lt;div&gt;&amp;nbsp;-bgTexture: Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -bgSprite: Sprite&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-44">
+          <mxGeometry y="26" width="270" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-45" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-44">
+          <mxGeometry y="70" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-46" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; +Instruction(window: RenderWindow*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +draw() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~Instruction() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-44">
+          <mxGeometry y="78" width="270" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-50" value="LeaderBoard" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4588" y="-110" width="310" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-51" value="&lt;div&gt;&amp;nbsp;-title: Text&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -scoreEntries: Text[10]&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -backText: Text&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-50">
+          <mxGeometry y="26" width="310" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-52" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-50">
+          <mxGeometry y="80" width="310" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-53" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; +Leaderboard(window: RenderWindow*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +draw() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-50">
+          <mxGeometry y="88" width="310" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-58" value="Collectables" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4953" y="430" width="310" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-59" value="&lt;div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -texture: sf::Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -sprite: sf::Sprite&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-58">
+          <mxGeometry y="26" width="310" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-60" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-58">
+          <mxGeometry y="70" width="310" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-61" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; +Collectables()&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~Collectables()&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setTexture(filepath: const std::string&amp;amp;) : bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setPosition(x: float, y: float) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getSprite() : sf::Sprite&amp;amp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getTexture() : sf::Texture&amp;amp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-58">
+          <mxGeometry y="78" width="310" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-66" value="Tails" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3423" y="1350" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-67" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-66">
+          <mxGeometry y="26" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-68" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + Tails()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + useAbility(lvl: char**, offset_y: float&amp;amp;, cell_size: float): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + usePowerUp(lvl: char**, offset_y: float&amp;amp;, cell_size: float): void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-66">
+          <mxGeometry y="34" width="280" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-69" value="Sonic" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3413" y="1560" width="300" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-283" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; - isAbilityActive: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - originalTerminalVelocity: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - abilityClock: sf::Clock&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-69">
+          <mxGeometry y="26" width="300" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-70" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-69">
+          <mxGeometry y="100" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-71" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + Sonic()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + useAbility(lvl: char**, offset_y: float&amp;amp;, cell_size: float): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + usePowerUp(lvl: char**, offset_y: float&amp;amp;, cell_size: float): void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-69">
+          <mxGeometry y="108" width="300" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-72" value="Knuckles" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3793" y="1600" width="300" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-235" value="&lt;div&gt;-powerUpClock: Clock&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -isAbilityActive: bool&amp;nbsp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-72">
+          <mxGeometry y="26" width="300" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-73" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-72">
+          <mxGeometry y="70" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-74" value="&lt;div&gt;+Knuckles() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +useAbility(lvl: char**, offset_y: float&amp;amp;, cell_size: float) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +usePowerUp(lvl: char**, offset_y: float&amp;amp;, cell_size: float) : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-72">
+          <mxGeometry y="78" width="300" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-96" value="PowerUp" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5333" y="790" width="330" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-98" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-96">
+          <mxGeometry y="26" width="330" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-99" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + PowerUp()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + ~PowerUp()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setTexture(filepath: std::string): bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getSprite(): sf::Sprite&amp;amp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getTexture(): sf::Texture&amp;amp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-96">
+          <mxGeometry y="34" width="330" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-100" value="BonusLife" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5323" y="440" width="276" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-101" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-100">
+          <mxGeometry y="26" width="276" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-207" value="&lt;div&gt;+BonusLife()&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~BonusLife()&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setTexture(filepath: const std::string&amp;amp;) : bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getSprite() : sf::Sprite&amp;amp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getTexture() : sf::Texture&amp;amp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-100">
+          <mxGeometry y="34" width="276" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-102" value="Ring" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5336" y="600" width="250" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-103" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-102">
+          <mxGeometry y="26" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-211" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + Rings()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + ~Rings()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setTexture(filepath: std::string): bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setPosition(x: float, y: float): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getSprite(): sf::Sprite&amp;amp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getTexture(): sf::Texture&amp;amp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-102">
+          <mxGeometry y="34" width="250" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-148" value="GameOverScoreScreen" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4093" y="-560" width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-226" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; -bgTexture: Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -bgSprite: Sprite&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -score: int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -playerName: std::string&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-148">
+          <mxGeometry y="26" width="320" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-149" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-148">
+          <mxGeometry y="100" width="320" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-150" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; +GameOverScoreScreen(window: RenderWindow*, score: int, playerName: const std::string&amp;amp;) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +draw() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~GameOverScoreScreen() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-148">
+          <mxGeometry y="108" width="320" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-153" value="PlayerFactory" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4463" y="526" width="250" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-154" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-153">
+          <mxGeometry y="26" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-155" value="+ createPlayer(type: std::string): Player*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-153">
+          <mxGeometry y="34" width="250" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-169" value="WinScreen" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5373" y="-640" width="290" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-170" value="&lt;div&gt;- score: int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - playerName: string&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - bgTexture: sf::Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - bgSprite: sf::Sprite&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-169">
+          <mxGeometry y="26" width="290" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-171" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-169">
+          <mxGeometry y="110" width="290" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-172" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + WinScreen(window: sf::RenderWindow*, score: int, playerName: string)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + draw(): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; ~WinScreen(): void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-169">
+          <mxGeometry y="118" width="290" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-173" value="Animation&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3573" y="1860" width="410" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-175" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-173">
+          <mxGeometry y="26" width="410" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-176" value="&lt;div&gt;+ updateBallAnimation(spriteRightBall: sf::Sprite&amp;amp;, spriteLeftBall: sf::Sprite&amp;amp;, spriteMain: sf::Sprite&amp;amp;, velocityX: float, isBallForm: bool, leadIsFlying: bool, ballFrameIndex: int&amp;amp;, ballFrameTimer: float&amp;amp;, ballFrameTime: const float, ballFrameCount: const int, ballFrameWidth: const int, ballFrameHeight: const int) : static void&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ updateLeftRightAnimation(spriteRight: sf::Sprite&amp;amp;, spriteLeft: sf::Sprite&amp;amp;, spriteMain: sf::Sprite&amp;amp;, velocityX: float, isBallForm: bool, leadIsFlying: bool, leftRightFrameIndex: int&amp;amp;, leftRightFrameTimer: float&amp;amp;, leftRightFrameTime: const float, leftRightFrameCount: const int, leftRightFrameWidth: const int, leftRightFrameHeight: const int) : static void&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ updateLeftRightFastAnimation(spriteRightRun: sf::Sprite&amp;amp;, spriteLeftRun: sf::Sprite&amp;amp;, spriteMain: sf::Sprite&amp;amp;, velocityX: float, isBallForm: bool, isFastRun: bool, leadIsFlying: bool, leftRightFastFrameIndex: int&amp;amp;, leftRightFastFrameTimer: float&amp;amp;, leftRightFastFrameTime: const float, leftRightFastFrameCount: const int, leftRightFastFrameWidth: const int, leftRightFastFrameHeight: const int) : static void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-173">
+          <mxGeometry y="34" width="410" height="276" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-177" value="CollectablesFactory" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4973" y="340" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-179" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-177">
+          <mxGeometry y="26" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-180" value="+createCollectable(type: string) : Collectables*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-177">
+          <mxGeometry y="34" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-181" value="MidScreen" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4443" y="-640" width="270" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-182" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; -bgTexture: Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -bgSprite: Sprite&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-181">
+          <mxGeometry y="26" width="270" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-183" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-181">
+          <mxGeometry y="70" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-184" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; +MidScreen(window: RenderWindow*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +draw() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~MidScreen() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-181">
+          <mxGeometry y="78" width="270" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-185" value="OptionsScreen" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4632" y="-300" width="260" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-186" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; -bgTexture: sf::Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -bgSprite: sf::Sprite&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -volume: int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-185">
+          <mxGeometry y="26" width="260" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-187" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-185">
+          <mxGeometry y="80" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-188" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; +OptionsScreen(window: sf::RenderWindow*, volume: int)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +draw() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setVolume(v: int) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~OptionsScreen() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-185">
+          <mxGeometry y="88" width="260" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-189" value="UserNameInput" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5073" y="-640" width="280" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-190" value="&lt;div&gt;- playerName: string&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - promptText: sf::Text&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - nameText: sf::Text&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - currentInput: string&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-189">
+          <mxGeometry y="26" width="280" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-191" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-189">
+          <mxGeometry y="110" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-192" value="&lt;div&gt;+ UserNameInput(window: sf::RenderWindow*)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + draw(): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + handleInput(event: sf::Event&amp;amp;): bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getPlayerName(): string&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-189">
+          <mxGeometry y="118" width="280" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-193" value="LevelMenuScreen" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4743" y="-640" width="310" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-194" value="&lt;div&gt;&amp;nbsp;-bgTexture: Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -bgSprite: Sprite&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-193">
+          <mxGeometry y="26" width="310" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-195" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-193">
+          <mxGeometry y="70" width="310" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-196" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; +LevelMenuScreen(window: RenderWindow*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +draw() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~LevelMenuScreen() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-193">
+          <mxGeometry y="78" width="310" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-262" value="Level1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3403" y="-420" width="260" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-263" value="&lt;div&gt;#enemyArray: Enemy**&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #enemyCount: int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #projectileArray: Projectile**&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #projectileCount: int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-262">
+          <mxGeometry y="26" width="260" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-264" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-262">
+          <mxGeometry y="100" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-265" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; +Level1(screenWidth: int) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +run(window: RenderWindow&amp;amp;, ) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +isWinner() : bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~Level1() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-262">
+          <mxGeometry y="108" width="260" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-266" value="Level2" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3483" y="-625" width="260" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-267" value="&lt;div&gt;#enemyArray: Enemy**&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #enemyCount: int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #projectileArray: Projectile**&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #projectileCount: int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-266">
+          <mxGeometry y="26" width="260" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-268" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-266">
+          <mxGeometry y="100" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-269" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; +Level2(screenWidth: int) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +run(window: RenderWindow&amp;amp;, ) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +isWinner() : bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~Level2() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-266">
+          <mxGeometry y="108" width="260" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-270" value="Level3" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3783" y="-625" width="260" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-271" value="&lt;div&gt;#enemyArray: Enemy**&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #enemyCount: int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #projectileArray: Projectile**&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #projectileCount: int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-270">
+          <mxGeometry y="26" width="260" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-272" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-270">
+          <mxGeometry y="100" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-273" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; +Level3(screenWidth: int) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +run(window: RenderWindow&amp;amp;, ) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +isWinner() : bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~Level3() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-270">
+          <mxGeometry y="108" width="260" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-310" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.37;entryY=0.964;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-36" target="QuookxrwxB5gQYorjzpM-172">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="5163" y="-110" as="sourcePoint" />
+            <mxPoint x="5323" y="-110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-312" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-36" target="QuookxrwxB5gQYorjzpM-231">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="5163" y="-110" as="sourcePoint" />
+            <mxPoint x="5323" y="-110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="5483" y="-350" />
+              <mxPoint x="4543" y="-350" />
+              <mxPoint x="4543" y="-120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-313" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.99;entryY=1.008;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-36" target="QuookxrwxB5gQYorjzpM-275">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="5163" y="-110" as="sourcePoint" />
+            <mxPoint x="4483" y="-360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="5483" y="-350" />
+              <mxPoint x="4543" y="-350" />
+              <mxPoint x="4543" y="-280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-314" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1.002;entryY=0.785;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-36" target="QuookxrwxB5gQYorjzpM-150">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="5163" y="-110" as="sourcePoint" />
+            <mxPoint x="5323" y="-110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="5483" y="-380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-315" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.538;entryY=1.069;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-36" target="QuookxrwxB5gQYorjzpM-184">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="5163" y="-110" as="sourcePoint" />
+            <mxPoint x="5323" y="-110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="5478" y="-380" />
+              <mxPoint x="4588" y="-380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-316" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-36" target="QuookxrwxB5gQYorjzpM-196">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="5163" y="-110" as="sourcePoint" />
+            <mxPoint x="5323" y="-110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="5478" y="-340" />
+              <mxPoint x="4898" y="-340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-317" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.536;entryY=1.025;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-36" target="QuookxrwxB5gQYorjzpM-192">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="5163" y="-110" as="sourcePoint" />
+            <mxPoint x="5323" y="-110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="5478" y="-270" />
+              <mxPoint x="5223" y="-270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-320" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-36" target="QuookxrwxB5gQYorjzpM-51">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4943" y="-270" as="sourcePoint" />
+            <mxPoint x="5103" y="-270" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="5103" y="-180" />
+              <mxPoint x="5103" y="-57" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-321" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-36" target="QuookxrwxB5gQYorjzpM-186">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4943" y="-270" as="sourcePoint" />
+            <mxPoint x="5103" y="-270" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="5478" y="-247" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-322" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=0.724;exitY=1.113;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-39" target="QuookxrwxB5gQYorjzpM-24">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4923" y="-20" as="sourcePoint" />
+            <mxPoint x="5083" y="-20" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-323" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=0.987;exitY=0.372;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-33" target="QuookxrwxB5gQYorjzpM-27">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4563" y="150" as="sourcePoint" />
+            <mxPoint x="4723" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-324" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0.995;entryY=0.148;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.108;exitY=0.02;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-32" target="QuookxrwxB5gQYorjzpM-23">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="3983" y="150" as="sourcePoint" />
+            <mxPoint x="4143" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="4173" y="80" />
+              <mxPoint x="4173" y="-160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-325" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=1.014;entryY=0.1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.104;exitY=0.02;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-32" target="QuookxrwxB5gQYorjzpM-265">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="3983" y="150" as="sourcePoint" />
+            <mxPoint x="4143" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="4173" y="80" />
+              <mxPoint x="4173" y="-305" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-326" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0.835;entryY=1.118;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.104;exitY=0.005;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-32" target="QuookxrwxB5gQYorjzpM-269">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="3983" y="150" as="sourcePoint" />
+            <mxPoint x="4143" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="4173" y="80" />
+              <mxPoint x="4173" y="-320" />
+              <mxPoint x="3700" y="-330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-327" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0.527;entryY=1.095;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.014;exitY=0.217;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-33" target="QuookxrwxB5gQYorjzpM-273">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="3923" y="-180" as="sourcePoint" />
+            <mxPoint x="4143" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="3933" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-330" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.009;entryY=0.133;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-29" target="QuookxrwxB5gQYorjzpM-33">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="3770" y="688" as="sourcePoint" />
+            <mxPoint x="4533" y="80" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="3813" y="680" />
+              <mxPoint x="3803" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-331" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.009;entryY=0.432;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-41" target="QuookxrwxB5gQYorjzpM-33">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="3533" y="330" as="sourcePoint" />
+            <mxPoint x="3693" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="3833" y="1188" />
+              <mxPoint x="3833" y="204" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-332" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=0.991;exitY=0.21;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.003;entryY=0.797;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-5" target="QuookxrwxB5gQYorjzpM-33">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4203" y="530" as="sourcePoint" />
+            <mxPoint x="4363" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-333" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.105;entryY=0.987;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-153" target="QuookxrwxB5gQYorjzpM-35">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4429" y="353" as="sourcePoint" />
+            <mxPoint x="4493" y="289" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-334" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.112;exitY=1.036;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-7" target="QuookxrwxB5gQYorjzpM-68">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="3920" y="1220.116" as="sourcePoint" />
+            <mxPoint x="4363" y="1370" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="3973" y="1432" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-335" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.053;exitY=1.004;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-7" target="QuookxrwxB5gQYorjzpM-283">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="3948.5" y="1301.7640000000001" as="sourcePoint" />
+            <mxPoint x="3723" y="1242" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="3949" y="1360" />
+              <mxPoint x="3773" y="1360" />
+              <mxPoint x="3773" y="1623" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-336" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.176;exitY=1.046;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.684;entryY=0.053;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-7" target="QuookxrwxB5gQYorjzpM-72">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4008.5" y="1296.7240000000002" as="sourcePoint" />
+            <mxPoint x="4009" y="1390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-337" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-180" target="QuookxrwxB5gQYorjzpM-35">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4913" y="500" as="sourcePoint" />
+            <mxPoint x="5073" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-338" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0.808;entryY=1.061;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-61" target="QuookxrwxB5gQYorjzpM-35">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4983" y="397" as="sourcePoint" />
+            <mxPoint x="4902" y="394" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="4813" y="564" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-339" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.996;exitY=0.079;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-61" target="QuookxrwxB5gQYorjzpM-207">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4913" y="500" as="sourcePoint" />
+            <mxPoint x="5073" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-340" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.711;exitY=1.001;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-61" target="QuookxrwxB5gQYorjzpM-211">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="5272" y="527" as="sourcePoint" />
+            <mxPoint x="5333" y="525" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="5173" y="692" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-341" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.571;exitY=0.987;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-61" target="QuookxrwxB5gQYorjzpM-99">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4913" y="500" as="sourcePoint" />
+            <mxPoint x="5133" y="920" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="5130" y="882" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-342" value="CrabMeat" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4243" y="1780" width="350" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-343" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; -movingRight: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -shootCooldown: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -timeSinceLastShot: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -timeSinceLastCollision: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -collisionCooldown: float&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-342">
+          <mxGeometry y="26" width="350" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-344" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-342">
+          <mxGeometry y="130" width="350" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-345" value="&lt;div&gt;+CrabMeat(x: float, y: float) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +shootProjectiles() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +update(lvl: char**, cellSize: int, mapWidth: int, mapHeight: int, deltaTime: float, player: Player*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +move(lvl: char**, cellSize: int, mapWidth: int, mapHeight: int, player: Player*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +attack() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +takeDamage() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~CrabMeat() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-342">
+          <mxGeometry y="138" width="350" height="182" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-346" value="Enemy" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4734" y="910" width="490" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-347" value="&lt;div&gt;&lt;div&gt;#posX: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;#posY: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #velocityX: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #velocityY: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #health: int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #texture: sf::Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #sprite: sf::Sprite&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; #projectileThrower: bool&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-346">
+          <mxGeometry y="26" width="490" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-348" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-346">
+          <mxGeometry y="160" width="490" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-349" value="&lt;div&gt;+Enemy()&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~Enemy()&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +move(lvl: char**, cellSize: int, mapWidth: int, mapHeight: int, player: Player*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +attack() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +takeDamage() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +update(lvl: char**, cellSize: int, mapWidth: int, mapHeight: int, deltaTime: float, player: Player*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +draw(window: RenderWindow&amp;amp;, offsetX: float) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setPos(x: float, y: float) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setHealth(h: int) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setTexture(texturePath: const std::string&amp;amp;) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getPosX() : float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getPosY() : float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getHealth() : int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getProjectileThrower() : bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getSprite() : sf::Sprite&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-346">
+          <mxGeometry y="168" width="490" height="262" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-354" value="BeeBot" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5018" y="1780" width="250" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-355" value="&lt;div&gt;-timeSinceLastCollision: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -collisionCooldown: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -speed: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -zigzagSpeed: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -zigzagAmplitude: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -zigzagTimer: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -movingRight: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -initialY: float&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-354">
+          <mxGeometry y="26" width="250" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-356" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-354">
+          <mxGeometry y="150" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-357" value="&lt;div&gt;&amp;nbsp;+BeeBot(x: float, y: float) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +update(lvl: char**, cellSize: int, mapWidth: int, mapHeight: int, deltaTime: float, player: Player*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +move(lvl: char**, cellSize: int, mapWidth: int, mapHeight: int, player: Player*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +attack() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +takeDamage() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~BeeBot() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-354">
+          <mxGeometry y="158" width="250" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-358" value="MotoBug" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4618" y="1780" width="350" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-359" value="&lt;div&gt;&amp;nbsp;-movingRight: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -timeSinceLastCollision: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -collisionCooldown: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -speed: float&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-358">
+          <mxGeometry y="26" width="350" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-360" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-358">
+          <mxGeometry y="90" width="350" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-361" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+Motobug(x: float, y: float) : void&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +update(lvl: char**, cellSize: int, mapWidth: int, mapHeight: int, deltaTime: float, player: Player*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +move(lvl: char**, cellSize: int, mapWidth: int, mapHeight: int, player: Player*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +attack() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +takeDamage() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~Motobug() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-358">
+          <mxGeometry y="98" width="350" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-362" value="BatBrain" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5368" y="1770" width="310" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-363" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; -movingRight: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -timeSinceLastCollision: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -collisionCooldown: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -speed: float&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-362">
+          <mxGeometry y="26" width="310" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-364" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-362">
+          <mxGeometry y="120" width="310" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-365" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; +BatBrain(x: float, y: float) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +update(lvl: char**, cellSize: int, mapWidth: int, mapHeight: int, deltaTime: float, player: Player*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +move(lvl: char**, cellSize: int, mapWidth: int, mapHeight: int, player: Player*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +attack() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +takeDamage() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~BatBrain() : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-362">
+          <mxGeometry y="128" width="310" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-366" value="EnemyFactory" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4503" y="950" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-367" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-366">
+          <mxGeometry y="26" width="200" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-368" value="&amp;nbsp; &amp;nbsp; +createEnemy(type: const std::string&amp;amp;, xPos: int, yPos: int) : Enemy*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-366">
+          <mxGeometry y="34" width="200" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-369" value="Projectile" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3393" y="-1070" width="300" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-370" value="&lt;div&gt;- posX: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - posY: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - initialPosX: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - initialPosY: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - speed: const float = 700.0&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - isTransparent: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - elapsedTime: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - enemy: Enemy*&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - sprite: sf::Sprite&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - projectileTexture: sf::Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - velocityX: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - velocityY: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - transparentTexture: sf::Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - internalClock: sf::Clock&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-369">
+          <mxGeometry y="26" width="300" height="214" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-371" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-369">
+          <mxGeometry y="240" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-372" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + Projectile(enemy: Enemy*)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + setPosition(x: float, y: float): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getPosX(): float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getPosY(): float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + move(player: Player*, deltaClock: sf::Clock&amp;amp;, lvl: char**, mapWidth: int, mapHeight: int, cellSize: int): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + draw(window: sf::RenderWindow&amp;amp;, cameraOffsetX: float, cameraOffsetY: float): void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-369">
+          <mxGeometry y="248" width="300" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-373" value="FLyingEnemy" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5153" y="1440" width="290" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-374" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-373">
+          <mxGeometry y="26" width="290" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-378" value="&lt;div&gt;+FlyingEnemy()&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +move(lvl: char**, cellSize: int, mapWidth: int, mapHeight: int, player: Player*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +attack() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +takeDamage() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~FlyingEnemy()&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +update(lvl: char**, cellSize: int, mapWidth: int, mapHeight: int, deltaTime: float, player: Player*) : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-373">
+          <mxGeometry y="34" width="290" height="186" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-376" value="CrawlingEnemy" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="4593" y="1430" width="380" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-377" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-376">
+          <mxGeometry y="26" width="380" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-375" value="&lt;div&gt;&amp;nbsp; +CrawlingEnemy()&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +move(lvl: char**, cellSize: int, mapWidth: int, mapHeight: int, player: Player*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +attack() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +takeDamage() : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~CrawlingEnemy()&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +update(lvl: char**, cellSize: int, mapWidth: int, mapHeight: int, deltaTime: float, player: Player*) : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-376">
+          <mxGeometry y="34" width="380" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-350" value="BossEnemy" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3403" y="-50" width="260" height="570" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-351" value="&lt;div&gt;&lt;div&gt;-PosX: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -PosY: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -health: int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -boss_clk: Clock&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -playerAttack_clk: Clock&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -playerPosX: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -playerPosY: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -bossWidth: int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -bossHeight: int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -isAttack: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -isMovingDown: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -isMovingUp: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -isMovingRight: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -isMovingLeft: bool&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -rightTex: Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -leftTex: Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; -bossSprite: Sprite&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-350">
+          <mxGeometry y="26" width="260" height="264" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-352" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-350">
+          <mxGeometry y="290" width="260" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-353" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; +BossEnemy()&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +~BossEnemy()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setPosX(x: float) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getPosX() : float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setPosY(y: float) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getPosY() : float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setBossSprite(sprite: Sprite) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getBossSprite() : Sprite&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setRightTex(texture: Texture) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getRightTex() : Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setLeftTex(texture: Texture) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getLeftTex() : Texture&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +setHealth(health: int) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +getHealth() : int&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +moveBoss(lvl: char**, int, int, int, Player*) : void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; +drawBoss(window: RenderWindow&amp;amp;) : void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-350">
+          <mxGeometry y="318" width="260" height="252" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-382" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=0.978;exitY=0.88;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-351" target="QuookxrwxB5gQYorjzpM-23">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4263" y="420" as="sourcePoint" />
+            <mxPoint x="4423" y="420" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="3763" y="208" />
+              <mxPoint x="3763" y="-110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-384" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.635;entryY=1.054;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-366" target="QuookxrwxB5gQYorjzpM-35">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4413" y="910" as="sourcePoint" />
+            <mxPoint x="4573" y="910" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="4603" y="880" />
+              <mxPoint x="4742" y="880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-385" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.689;entryY=1.034;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-346" target="QuookxrwxB5gQYorjzpM-35">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4413" y="910" as="sourcePoint" />
+            <mxPoint x="4573" y="910" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="4857" y="850" />
+              <mxPoint x="4773" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-387" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=1.02;exitY=0.18;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.51;entryY=1.037;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-176" target="QuookxrwxB5gQYorjzpM-7">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4413" y="1440" as="sourcePoint" />
+            <mxPoint x="4573" y="1440" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="4183" y="1940" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-388" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.354;exitY=0.058;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-373" target="QuookxrwxB5gQYorjzpM-349">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4413" y="1680" as="sourcePoint" />
+            <mxPoint x="4573" y="1680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-389" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.307;entryY=0.989;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-376" target="QuookxrwxB5gQYorjzpM-349">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4413" y="1680" as="sourcePoint" />
+            <mxPoint x="4573" y="1680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-391" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0.323;entryY=1.02;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-355" target="QuookxrwxB5gQYorjzpM-378">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4473" y="1740" as="sourcePoint" />
+            <mxPoint x="4633" y="1740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-392" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.668;entryY=1.032;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-362" target="QuookxrwxB5gQYorjzpM-378">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4473" y="1740" as="sourcePoint" />
+            <mxPoint x="4633" y="1740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-393" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.51;entryY=1.049;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-358" target="QuookxrwxB5gQYorjzpM-375">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4473" y="1740" as="sourcePoint" />
+            <mxPoint x="4633" y="1740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-394" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-342" target="QuookxrwxB5gQYorjzpM-375">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="4473" y="1740" as="sourcePoint" />
+            <mxPoint x="4633" y="1740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-395" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.997;exitY=0.724;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-370" target="QuookxrwxB5gQYorjzpM-270">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="3943" y="-660" as="sourcePoint" />
+            <mxPoint x="4103" y="-660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-396" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=0.374;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.173;entryY=-0.006;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-372" target="QuookxrwxB5gQYorjzpM-262">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="3943" y="-660" as="sourcePoint" />
+            <mxPoint x="4103" y="-660" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="3413" y="-630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-397" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=0.77;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.583;entryY=0.007;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-372" target="QuookxrwxB5gQYorjzpM-266">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="3943" y="-660" as="sourcePoint" />
+            <mxPoint x="4103" y="-660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-398" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;exitX=0.996;exitY=0.357;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.99;entryY=0.953;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QuookxrwxB5gQYorjzpM-349" target="QuookxrwxB5gQYorjzpM-370">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="5290" y="840" as="sourcePoint" />
+            <mxPoint x="3908.7879527698865" y="-810" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="5730" y="1172" />
+              <mxPoint x="5710" y="-840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-399" value="Classname" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="5140" y="90" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-401" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-399">
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-402" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-399">
+          <mxGeometry y="34" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-40" value="SlidingWindow" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="3360" y="1130" width="390" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-41" value="&lt;div&gt;&amp;nbsp;- offsetX: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - screenWidth: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - scrollSpeed: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - leftMargin: float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; - rightMargin: float&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-40">
+          <mxGeometry y="26" width="390" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-42" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QuookxrwxB5gQYorjzpM-40">
+          <mxGeometry y="110" width="390" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="QuookxrwxB5gQYorjzpM-43" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; + SlidingWindow(screenWidth: float, scrollSpeed: float)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + update(playerX: float, offsetY: float, deltaTime: float): void&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + getOffset(): float&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; + reset(): void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QuookxrwxB5gQYorjzpM-40">
+          <mxGeometry y="118" width="390" height="72" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

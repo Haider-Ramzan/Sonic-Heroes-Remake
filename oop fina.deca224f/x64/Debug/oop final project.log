@@ -1,0 +1,232 @@
+﻿  Animation.cpp
+  BatBrain.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BatBrain.cpp(112,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BatBrain.cpp(113,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BatBrain.cpp(146,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BatBrain.cpp(147,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BatBrain.cpp(176,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BatBrain.cpp(177,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BatBrain.cpp(210,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BatBrain.cpp(211,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  BeeBot.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BeeBot.cpp(82,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BeeBot.cpp(83,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BeeBot.cpp(112,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BeeBot.cpp(113,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BeeBot.cpp(146,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BeeBot.cpp(147,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  BonusLife.cpp
+  BossEnemy.cpp
+  BossLevel.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BossLevel.cpp(73,69): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BossLevel.cpp(75,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\BossLevel.cpp(80,73): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Collectables.cpp
+  CollectablesFactory.cpp
+  CrabMeat.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\CrabMeat.cpp(86,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\CrabMeat.cpp(87,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\CrabMeat.cpp(120,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\CrabMeat.cpp(121,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\CrabMeat.cpp(150,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\CrabMeat.cpp(151,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\CrabMeat.cpp(184,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\CrabMeat.cpp(185,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  CrawlingEnemy.cpp
+  Enemy.cpp
+  EnemyFactory.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\EnemyFactory.cpp(8,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\EnemyFactory.cpp(8,22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\EnemyFactory.cpp(12,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\EnemyFactory.cpp(12,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\EnemyFactory.cpp(16,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\EnemyFactory.cpp(16,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\EnemyFactory.cpp(20,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\EnemyFactory.cpp(20,21): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  FlyingEnemy.cpp
+  Game.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(34,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(92,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(102,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(114,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(125,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(135,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(167,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(204,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(218,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(242,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(254,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(265,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(277,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(289,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(314,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(337,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(372,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(385,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(408,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(441,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(452,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(476,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(510,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(521,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(545,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(578,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(590,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Game.cpp(614,26): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  GameOverScoreScreen.cpp
+  Instruction.cpp
+  Knuckles.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Knuckles.cpp(50,30): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Knuckles.cpp(51,29): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Knuckles.cpp(106,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Knuckles.cpp(107,21): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Knuckles.cpp(108,22): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Knuckles.cpp(145,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Knuckles.cpp(146,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Knuckles.cpp(147,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Leaderboard.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(12,47): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(12,47): warning C4244:         with
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(12,47): warning C4244:         [
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(12,47): warning C4244:             T=unsigned int
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(12,47): warning C4244:         ]
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(18,77): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(18,77): warning C4244:         with
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(18,77): warning C4244:         [
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(18,77): warning C4244:             T=unsigned int
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(18,77): warning C4244:         ]
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(18,50): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(18,50): warning C4244:         with
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(18,50): warning C4244:         [
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(18,50): warning C4244:             T=unsigned int
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(18,50): warning C4244:         ]
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(28,20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(44,80): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(44,69): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(44,69): warning C4244:         with
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(44,69): warning C4244:         [
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(44,69): warning C4244:             T=unsigned int
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Leaderboard.cpp(44,69): warning C4244:         ]
+  Level.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level.cpp(8,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Level1.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level1.cpp(16,57): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level1.cpp(17,59): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level1.cpp(129,69): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level1.cpp(130,63): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level1.cpp(168,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level1.cpp(169,72): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level1.cpp(170,72): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level1.cpp(172,73): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level1.cpp(173,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level1.cpp(174,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+  Compiling...
+  Level2.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level2.cpp(16,64): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level2.cpp(17,59): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level2.cpp(19,55): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level2.cpp(154,69): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level2.cpp(155,69): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level2.cpp(157,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level2.cpp(158,72): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level2.cpp(159,72): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level2.cpp(161,73): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level2.cpp(162,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level2.cpp(163,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Level3.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level3.cpp(16,65): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level3.cpp(17,59): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level3.cpp(19,61): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level3.cpp(20,62): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level3.cpp(21,61): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level3.cpp(22,60): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level3.cpp(164,69): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level3.cpp(165,69): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level3.cpp(167,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level3.cpp(168,72): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level3.cpp(169,72): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level3.cpp(171,73): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level3.cpp(172,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Level3.cpp(173,76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  LevelMenuScreen.cpp
+  main.cpp
+  MainMenu.cpp
+  Map.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(715,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(719,58): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(723,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(727,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(731,59): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(735,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(739,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(743,53): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(747,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(766,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(766,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(770,48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(770,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(774,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(774,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(778,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(778,25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(782,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(782,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(786,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(786,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(790,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(790,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(794,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Map.cpp(794,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  MidScreen.cpp
+  MotoBug.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\MotoBug.cpp(93,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\MotoBug.cpp(94,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\MotoBug.cpp(127,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\MotoBug.cpp(128,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\MotoBug.cpp(157,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\MotoBug.cpp(158,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\MotoBug.cpp(191,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\MotoBug.cpp(192,29): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  OptionsScreen.cpp
+  Player.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Player.cpp(161,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Player.cpp(162,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Player.cpp(163,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Player.cpp(220,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Player.cpp(221,21): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Player.cpp(222,19): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Player.cpp(223,22): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Player.cpp(400,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Player.cpp(401,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Player.cpp(402,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Player.cpp(406,46): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  PlayerFactory.cpp
+  PowerUp.cpp
+  Projectile.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Projectile.cpp(71,38): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Projectile.cpp(107,30): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Projectile.cpp(108,30): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Projectile.cpp(109,30): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Projectile.cpp(110,30): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Projectile.cpp(133,19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Projectile.cpp(134,19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Rings.cpp
+  Screen.cpp
+  SlidingWindow.cpp
+  Sonic.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Sonic.cpp(45,30): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Sonic.cpp(46,29): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Sonic.cpp(130,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Sonic.cpp(131,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Sonic.cpp(132,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Tails.cpp
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Tails.cpp(62,30): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Tails.cpp(63,29): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Tails.cpp(148,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Tails.cpp(149,17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\Tails.cpp(150,18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  UserNameInput.cpp
+  WinScreen.cpp
+  Generating Code...
+  oop final project.vcxproj -> C:\Users\USER\OneDrive\Desktop\SonicHeroesGame\oop final project\x64\Debug\oop final project.exe
